@@ -53,7 +53,11 @@ This Node.js application provides a simple User Management API with CRUD (Create
 npm install
 ```
 
-3. Start the server:
+3. Start the server.
+
+```bash
+npm start
+```
 
 ## Dependencies
 
@@ -79,7 +83,6 @@ This project utilizes several dependencies to facilitate the development of a si
 
 ### Summary
 
-**Getting Started**
--Clone this repository.
--Install the necessary dependencies using npm install.
--Start the server using node server.js.
+- Clone this repository.
+- Install the necessary dependencies using npm install.
+- Start the server using node server.js.
