@@ -48,8 +48,10 @@ This Node.js application provides a simple User Management API with CRUD (Create
 1. Install Node.js and npm (Node Package Manager) if not already installed.
 
 2. Install project dependencies:
--```bash
+
+```bash
 npm install
+```
 
 3. Start the server:
 
