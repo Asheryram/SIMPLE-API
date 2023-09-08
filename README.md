@@ -1,29 +1,57 @@
-## User Management API
-This code snippet represents a Node.js-based API for user management. It includes various endpoints for managing user data such as adding, retrieving, updating, and removing users. The API uses the Express.js framework for handling HTTP requests and http-status-codes for consistent HTTP status code handling.
+# User Management API
 
-Endpoints:
-Add User
+This Node.js application provides a simple User Management API with CRUD (Create, Read, Update, Delete) operations. It uses the Express.js framework for building the API and the HTTP Status Codes module for status code constants.
 
-Route: POST /add
-Description: Adds a new user to the system. Requires a user object in the request body. If the "name" field is missing, it returns a "BAD_REQUEST" status.
-Get All Users
+## Endpoints
 
-Route: GET /all
-Description: Retrieves a list of all users. If there are no users, it returns a "NOT_FOUND" status.
-Get User by ID
+### 1. Add User
 
-Route: GET /user/:id
-Description: Retrieves a user by their ID. If the user is not found, it returns a "NOT_FOUND" status.
-Update User by ID
+- **Endpoint**: `POST /api/users`
+- **Description**: Adds a new user to the system.
+- **Request Body**: JSON object containing user data.
+- **Response**: Returns the newly added user if successful, or an error message if the request is invalid.
 
-Route: PUT /user/:id
-Description: Updates a user by their ID. Requires a user object in the request body. If the user is not found, it returns a "NOT_FOUND" status.
-Remove User by ID
+### 2. Get All Users
 
-Route: DELETE /user/:id
-Description: Removes a user by their ID. If the user is successfully removed, it returns a "SUCCESS" status; otherwise, it returns a "FAILURE" status.
-Usage
-To use this API, make HTTP requests to the respective endpoints as described above. Ensure you have the required dependencies installed and properly configured.
+- **Endpoint**: `GET /api/users`
+- **Description**: Retrieves a list of all users.
+- **Response**: Returns a list of users if there are any, or an error message if there are no users.
+
+### 3. Get User by ID
+
+- **Endpoint**: `GET /api/users/:id`
+- **Description**: Retrieves a user by their ID.
+- **Response**: Returns the user if found, or an error message if the user does not exist.
+
+### 4. Update User
+
+- **Endpoint**: `PUT /api/users/:id`
+- **Description**: Updates a user's information by their ID.
+- **Request Body**: JSON object containing user data to update.
+- **Response**: Returns the updated user if successful, or an error message if the user is not found.
+
+### 5. Remove User
+
+- **Endpoint**: `DELETE /api/users/:id`
+- **Description**: Deletes a user by their ID.
+- **Response**: Returns a success message if the user is deleted, or an error message if the user is not found.
+
+## Status Codes
+
+- `200 OK`: Successful request.
+- `201 Created`: User successfully added.
+- `400 Bad Request`: Invalid request.
+- `404 Not Found`: User or resource not found.
+
+## Usage
+
+1. Install Node.js and npm (Node Package Manager) if not already installed.
+
+2. Install project dependencies:
+-```bash
+npm install
+
+3. Start the server:
 
 ## Dependencies
 
@@ -47,14 +75,9 @@ This project utilizes several dependencies to facilitate the development of a si
 
 - **yup**: A schema validation library used in conjunction with `express-yup-middleware` to validate incoming data against predefined schemas.
 
-### Installation
+### Summary
 
-To install the project's dependencies, run the following command:
-
-```bash
-npm install
-
-Getting Started
-Clone this repository.
-Install the necessary dependencies using npm install.
-Start the server using node server.js.
+**Getting Started**
+-Clone this repository.
+-Install the necessary dependencies using npm install.
+-Start the server using node server.js.
