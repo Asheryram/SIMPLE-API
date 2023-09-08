@@ -1,13 +1,14 @@
 import express from 'express'
 import helmet from 'helmet'
 import { rateLimit } from 'express-rate-limit'
+import cors from 'cors'
 
 import userRoutes from './user.routes.js'
 import mainRoutes from './main.routes.js'
 import compression from 'compression'
 
 const app = express()
-const port = 3000
+const port = 4000
 
 
 const limiter = rateLimit({
@@ -21,6 +22,7 @@ app.use(compression())
 app.use(limiter)
 app.use(helmet())
 app.use(express.json())
+app.use(cors())
 
 app.use('/v1', mainRoutes)
 app.use('/v1/user', userRoutes)

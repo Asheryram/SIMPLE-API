@@ -2,7 +2,7 @@ const  users = [
     {
         id:1,
         name : 'Yram',
-        email: 'hsds@gh.hj',
+        email: 'ashertettehabotsi@gmail.com',
         city : 'Accra',
         country : 'Ghana',
         gender : 'male'
